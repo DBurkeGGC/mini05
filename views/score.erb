@@ -1,3 +1,21 @@
-<p>Your score is .... </p>
-
-<p><a href="/startover">Take in again</a></p>
+<p>Your score is <%= score %> %</p>
+<% if score == 100.0 %>
+<p>Way to go, you aced it!</p>
+<img src="/STAR.png" width="200" height="200" alt="STAR"/>
+<img src="/STAR.png" width="200" height="200" alt="STAR"/>
+<img src="/STAR.png" width="200" height="200" alt="STAR"/>
+<% elsif score > 60.00 %>
+<p>That was a good run!</p>
+<img src="/STAR.png" width="200" height="200" alt="STAR"/>
+<img src="/STAR.png" width="200" height="200" alt="STAR"/>
+<% elsif score > 40.00 %>
+<p>You're getting there!</p>
+<img src="/STAR.png" width="200" height="200" alt="STAR"/>
+<% elsif score > 20.00 %>
+<p>Not great, but you got some right!</p>
+<img src="/STAR.png" width="200" height="200" alt="STAR"/>
+<% else %>
+<p>You're really bad at this!</p>
+<img src="/FROWN.png" width="200" height="200" alt="BAD JOB"/>
+<% end %>
+<br/><p><a href="/startover">Take the quiz again!</a></p>
